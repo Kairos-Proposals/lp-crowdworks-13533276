@@ -1,0 +1,523 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>夢あかり様へのご提案 | Kairos</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@500;700&family=Zen+Kaku+Gothic+New:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --night: #1F2D3D;
+    --night-deep: #152030;
+    --lamp: #F4A259;
+    --lamp-soft: #FFD9A0;
+    --washi: #FAF6F0;
+    --blush: #E8D5C4;
+    --vermilion: #D96C4F;
+  }
+
+  *{ box-sizing: border-box; margin:0; padding:0; }
+
+  body{
+    font-family: 'Zen Kaku Gothic New', sans-serif;
+    background: var(--washi);
+    color: var(--night);
+    line-height: 1.9;
+    letter-spacing: 0.02em;
+  }
+
+  h1, h2, h3, .mincho{
+    font-family: 'Shippori Mincho', serif;
+  }
+
+  img, svg { display:block; }
+
+  .container{
+    max-width: 1040px;
+    margin: 0 auto;
+    padding: 0 24px;
+  }
+
+  /* ===== HERO ===== */
+  .hero{
+    position: relative;
+    background: radial-gradient(circle at 20% 110%, rgba(244,162,89,0.25), transparent 55%),
+                radial-gradient(circle at 80% -10%, rgba(217,108,79,0.2), transparent 50%),
+                linear-gradient(160deg, var(--night-deep) 0%, var(--night) 60%, #233244 100%);
+    color: var(--washi);
+    overflow: hidden;
+    padding: 120px 0 140px;
+  }
+
+  .lantern{
+    position: absolute;
+    border-radius: 50%;
+    filter: blur(1px);
+    opacity: 0.9;
+  }
+
+  .lantern::after{
+    content:"";
+    position:absolute;
+    inset:-40%;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(244,162,89,0.35), transparent 70%);
+  }
+
+  .l1{ width:14px; height:14px; background: var(--lamp-soft); top: 18%; left: 12%; box-shadow:0 0 18px 6px rgba(244,162,89,0.6); }
+  .l2{ width:10px; height:10px; background: var(--lamp); top: 60%; left: 22%; box-shadow:0 0 14px 5px rgba(244,162,89,0.5); }
+  .l3{ width:18px; height:18px; background: var(--lamp-soft); top: 32%; right: 14%; box-shadow:0 0 22px 8px rgba(244,162,89,0.55); }
+  .l4{ width:8px; height:8px; background: var(--lamp); top: 75%; right: 24%; box-shadow:0 0 10px 4px rgba(244,162,89,0.5); }
+  .l5{ width:12px; height:12px; background: var(--lamp-soft); top: 8%; right: 38%; box-shadow:0 0 16px 6px rgba(244,162,89,0.5); }
+
+  .badge{
+    display:inline-flex;
+    align-items:center;
+    gap: 8px;
+    font-size: 13px;
+    letter-spacing: 0.15em;
+    padding: 8px 18px;
+    border: 1px solid rgba(255,217,160,0.5);
+    border-radius: 999px;
+    color: var(--lamp-soft);
+    margin-bottom: 36px;
+    position: relative;
+    z-index: 2;
+  }
+
+  .badge span.dot{
+    width:6px; height:6px; border-radius:50%; background: var(--lamp);
+    box-shadow: 0 0 8px 3px rgba(244,162,89,0.7);
+  }
+
+  .hero h1{
+    position: relative;
+    z-index: 2;
+    font-size: clamp(32px, 5vw, 54px);
+    font-weight: 700;
+    line-height: 1.6;
+    max-width: 760px;
+    margin-bottom: 28px;
+  }
+
+  .hero h1 .accent{
+    color: var(--lamp);
+  }
+
+  .hero p.lead{
+    position: relative;
+    z-index: 2;
+    max-width: 580px;
+    font-size: 16px;
+    color: rgba(250,246,240,0.85);
+  }
+
+  .hero .sub-client{
+    position: relative;
+    z-index: 2;
+    margin-top: 48px;
+    font-size: 13px;
+    color: rgba(250,246,240,0.6);
+    letter-spacing: 0.1em;
+    border-top: 1px solid rgba(255,255,255,0.15);
+    padding-top: 20px;
+    max-width: 580px;
+  }
+
+  /* ===== SECTION COMMON ===== */
+  section{
+    padding: 96px 0;
+  }
+
+  .section-head{
+    text-align: center;
+    margin-bottom: 64px;
+  }
+
+  .section-head .tag{
+    font-size: 13px;
+    letter-spacing: 0.2em;
+    color: var(--vermilion);
+    display:block;
+    margin-bottom: 14px;
+  }
+
+  .section-head h2{
+    font-size: clamp(24px, 3.4vw, 34px);
+    font-weight: 700;
+    color: var(--night);
+  }
+
+  /* ===== UNDERSTANDING ===== */
+  .understand{
+    background: linear-gradient(180deg, #FAF6F0 0%, #F3E8DC 100%);
+  }
+
+  .understand-grid{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+  }
+
+  .understand-card{
+    background: var(--washi);
+    border: 1px solid rgba(31,45,61,0.08);
+    border-radius: 4px;
+    padding: 36px 32px;
+    position: relative;
+  }
+
+  .understand-card::before{
+    content:"";
+    position:absolute;
+    top:0; left:0;
+    width: 4px;
+    height: 100%;
+    background: var(--lamp);
+  }
+
+  .understand-card h3{
+    font-size: 18px;
+    margin-bottom: 16px;
+    color: var(--night);
+  }
+
+  .understand-card p{
+    font-size: 14.5px;
+    color: #4a5563;
+  }
+
+  .understand-message{
+    margin-top: 48px;
+    text-align: center;
+    font-family: 'Shippori Mincho', serif;
+    font-size: clamp(18px, 2.4vw, 22px);
+    color: var(--night);
+    line-height: 2;
+  }
+
+  .understand-message .vermilion{
+    color: var(--vermilion);
+  }
+
+  /* ===== VALUE ===== */
+  .value{
+    background: var(--washi);
+  }
+
+  .value-grid{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 28px;
+  }
+
+  .value-card{
+    background: linear-gradient(160deg, #ffffff 0%, #FBF2E7 100%);
+    border: 1px solid var(--blush);
+    border-radius: 6px;
+    padding: 32px 26px;
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+  }
+
+  .value-card:hover{
+    transform: translateY(-4px);
+    box-shadow: 0 16px 30px -18px rgba(217,108,79,0.4);
+  }
+
+  .value-num{
+    font-family: 'Shippori Mincho', serif;
+    font-size: 13px;
+    color: var(--vermilion);
+    letter-spacing: 0.15em;
+    margin-bottom: 14px;
+    display:block;
+  }
+
+  .value-card h3{
+    font-size: 17px;
+    margin-bottom: 12px;
+    color: var(--night);
+    line-height: 1.6;
+  }
+
+  .value-card p{
+    font-size: 14px;
+    color: #566073;
+  }
+
+  .value-grid .wide{
+    grid-column: span 1;
+  }
+
+  @media (min-width: 769px){
+    .value-grid{
+      grid-template-columns: repeat(6, 1fr);
+    }
+    .value-grid .value-card:nth-child(1){ grid-column: span 2; }
+    .value-grid .value-card:nth-child(2){ grid-column: span 2; }
+    .value-grid .value-card:nth-child(3){ grid-column: span 2; }
+    .value-grid .value-card:nth-child(4){ grid-column: span 3; }
+    .value-grid .value-card:nth-child(5){ grid-column: span 3; }
+  }
+
+  /* ===== FLOW ===== */
+  .flow{
+    background: linear-gradient(180deg, var(--night-deep) 0%, var(--night) 100%);
+    color: var(--washi);
+    position: relative;
+    overflow: hidden;
+  }
+
+  .flow .section-head h2{ color: var(--washi); }
+  .flow .section-head .tag{ color: var(--lamp); }
+
+  .timeline{
+    position: relative;
+    max-width: 760px;
+    margin: 0 auto;
+  }
+
+  .timeline::before{
+    content:"";
+    position: absolute;
+    left: 20px;
+    top: 10px;
+    bottom: 10px;
+    width: 1px;
+    background: linear-gradient(180deg, rgba(244,162,89,0.6), rgba(244,162,89,0.05));
+  }
+
+  .step{
+    position: relative;
+    padding-left: 64px;
+    margin-bottom: 48px;
+  }
+
+  .step:last-child{ margin-bottom: 0; }
+
+  .step .step-dot{
+    position: absolute;
+    left: 10px;
+    top: 4px;
+    width: 22px;
+    height: 22px;
+    border-radius: 50%;
+    background: var(--night);
+    border: 2px solid var(--lamp);
+    box-shadow: 0 0 14px 2px rgba(244,162,89,0.5);
+  }
+
+  .step .step-week{
+    font-size: 12px;
+    letter-spacing: 0.15em;
+    color: var(--lamp-soft);
+    margin-bottom: 8px;
+    display:block;
+  }
+
+  .step h3{
+    font-size: 18px;
+    margin-bottom: 10px;
+  }
+
+  .step p{
+    font-size: 14px;
+    color: rgba(250,246,240,0.75);
+  }
+
+  .flow-note{
+    margin-top: 56px;
+    text-align: center;
+    font-size: 13.5px;
+    color: rgba(250,246,240,0.6);
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  /* ===== CLOSING ===== */
+  .closing{
+    background: var(--washi);
+    text-align: center;
+    padding-bottom: 120px;
+  }
+
+  .closing h2{
+    font-size: clamp(24px, 3.6vw, 32px);
+    margin-bottom: 20px;
+  }
+
+  .closing p{
+    max-width: 520px;
+    margin: 0 auto 40px;
+    font-size: 15px;
+    color: #4a5563;
+  }
+
+  .cta-box{
+    display: inline-block;
+    background: linear-gradient(135deg, var(--vermilion), var(--lamp));
+    color: var(--washi);
+    padding: 20px 48px;
+    border-radius: 999px;
+    font-family: 'Shippori Mincho', serif;
+    font-size: 17px;
+    letter-spacing: 0.08em;
+    box-shadow: 0 18px 30px -16px rgba(217,108,79,0.6);
+  }
+
+  .closing .sign{
+    margin-top: 64px;
+    font-size: 12.5px;
+    letter-spacing: 0.2em;
+    color: #8a93a3;
+  }
+
+  footer{
+    background: var(--night-deep);
+    color: rgba(250,246,240,0.4);
+    text-align: center;
+    padding: 28px 0;
+    font-size: 12px;
+    letter-spacing: 0.1em;
+  }
+
+  /* ===== RESPONSIVE ===== */
+  @media (max-width: 768px){
+    .hero{ padding: 90px 0 100px; }
+    .understand-grid{ grid-template-columns: 1fr; }
+    .value-grid{ grid-template-columns: 1fr; }
+    section{ padding: 72px 0; }
+    .step{ padding-left: 52px; }
+  }
+</style>
+</head>
+<body>
+
+  <section class="hero">
+    <div class="lantern l1"></div>
+    <div class="lantern l2"></div>
+    <div class="lantern l3"></div>
+    <div class="lantern l4"></div>
+    <div class="lantern l5"></div>
+    <div class="container">
+      <div class="badge"><span class="dot"></span>Kairos より　夢あかり様への提案</div>
+      <h1>探している人と、<br>受け入れられる場所に、<br><span class="accent">灯り</span>をともす。</h1>
+      <p class="lead">介護施設探しは、情報の多さではなく「合う場所が見つからない」という不安がいちばんの壁です。夢あかり様が目指す、入居希望者と施設をまっすぐつなぐマッチングの仕組みを、小さく確実な一歩から一緒に形にします。</p>
+      <div class="sub-client">CLIENT：夢あかり 様　／　DEVELOPMENT PROPOSAL BY KAIROS</div>
+    </div>
+  </section>
+
+  <section class="understand">
+    <div class="container">
+      <div class="section-head">
+        <span class="tag">UNDERSTANDING</span>
+        <h2>ご依頼内容、丁寧に拝見いたしました</h2>
+      </div>
+      <div class="understand-grid">
+        <div class="understand-card">
+          <h3>施設側が抱える課題</h3>
+          <p>空室情報の更新が後回しになりがちで、問い合わせが来てから条件が合わないと分かる、という手間が発生しやすい領域です。地域・介護度・費用・生活保護対応など、条件が複雑なほど、情報を正しく届ける仕組みが必要になります。</p>
+        </div>
+        <div class="understand-card">
+          <h3>入居希望者側が抱える課題</h3>
+          <p>施設探しをする方やご家族は、初めての経験で分からないことばかりです。条件を入力するだけで候補が見える、スマートフォンでも迷わず使える、そんな「探しやすさ」が安心につながります。</p>
+        </div>
+      </div>
+      <p class="understand-message">
+        「専門知識がなくても、相談しながら進めたい」というお言葉を、<br>
+        私たちはとても大切にお受け取りしています。<br>
+        まずは<span class="vermilion">必要最低限の機能</span>で確実に立ち上げ、<br>
+        育てていけるシステムをご提案します。
+      </p>
+    </div>
+  </section>
+
+  <section class="value">
+    <div class="container">
+      <div class="section-head">
+        <span class="tag">OUR VALUE</span>
+        <h2>Kairosがご提供できること</h2>
+      </div>
+      <div class="value-grid">
+        <div class="value-card">
+          <span class="value-num">01</span>
+          <h3>要件を言葉から形にする伴走設計</h3>
+          <p>専門知識がなくても大丈夫です。やりたいことをヒアリングしながら、必要な機能を一緒に整理し、無理のない仕様に落とし込みます。</p>
+        </div>
+        <div class="value-card">
+          <span class="value-num">02</span>
+          <h3>検索・マッチングの核を丁寧に設計</h3>
+          <p>地域・介護度・費用・生活保護対応など複数条件の検索と、希望条件に合う施設の絞り込みロジックを、使いやすさを優先して構築します。</p>
+        </div>
+        <div class="value-card">
+          <span class="value-num">03</span>
+          <h3>管理画面とスマホ対応を標準で</h3>
+          <p>施設情報・空室状況を更新する管理者専用画面と、入居希望者が迷わず使えるスマートフォン対応のUIを最初から組み込みます。</p>
+        </div>
+        <div class="value-card">
+          <span class="value-num">04</span>
+          <h3>小さく始めて、育てられる設計</h3>
+          <p>まずは必要最低限の機能でリリースし、利用状況を見ながら通知機能や問い合わせ機能などを追加できるよう、拡張しやすい構成で開発します。</p>
+        </div>
+        <div class="value-card">
+          <span class="value-num">05</span>
+          <h3>予算に合わせた現実的なご提案</h3>
+          <p>ご予算・納期は相談しながら決めたいとのお言葉に沿い、まず概算費用と期間の目安を具体的にお伝えし、無理のない範囲で計画します。</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="flow">
+    <div class="container">
+      <div class="section-head">
+        <span class="tag">OUR PROCESS</span>
+        <h2>進め方・スケジュールイメージ</h2>
+      </div>
+      <div class="timeline">
+        <div class="step">
+          <div class="step-dot"></div>
+          <span class="step-week">STEP 1　目安：1週間</span>
+          <h3>ヒアリング・要件整理</h3>
+          <p>施設情報・入居希望者情報・検索条件など、必要な項目を一つひとつ確認しながら、最初に作る範囲を一緒に決めます。</p>
+        </div>
+        <div class="step">
+          <div class="step-dot"></div>
+          <span class="step-week">STEP 2　目安：1〜2週間</span>
+          <h3>画面イメージのご確認</h3>
+          <p>登録画面・検索画面・管理者画面の構成を簡単な形でお見せし、使い勝手を確認しながら調整します。</p>
+        </div>
+        <div class="step">
+          <div class="step-dot"></div>
+          <span class="step-week">STEP 3　目安：2〜3週間</span>
+          <h3>開発・実装</h3>
+          <p>情報登録・検索・マッチング・管理画面・スマートフォン対応の機能を順に実装し、進捗をこまめに共有します。</p>
+        </div>
+        <div class="step">
+          <div class="step-dot"></div>
+          <span class="step-week">STEP 4　目安：数日〜1週間</span>
+          <h3>確認・調整・公開</h3>
+          <p>実際にお試しいただき、気になる点を調整したうえで公開します。公開後の追加機能についてもご相談いただけます。</p>
+        </div>
+      </div>
+      <p class="flow-note">※ 上記は必要最低限の機能での概算期間です。詳細はご要望の範囲・デザインの有無などにより変動するため、まずは無料でお見積りいたします。</p>
+    </div>
+  </section>
+
+  <section class="closing">
+    <div class="container">
+      <h2 class="mincho">まずは、お話を聞かせてください</h2>
+      <p>概算費用・開発期間・過去の実績については、現在の状況やご希望を伺いながら具体的にご提示いたします。小さな確認からで構いません。お気軽にご連絡ください。</p>
+      <a href="#" class="cta-box">Kairosに相談してみる</a>
+      <div class="sign">KAIROS — WEB & SYSTEM DEVELOPMENT TEAM</div>
+    </div>
+  </section>
+
+  <footer>
+    © Kairos — 夢あかり様 マッチングシステム開発 ご提案
+  </footer>
+
+</body>
+</html>
